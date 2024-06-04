@@ -7,9 +7,9 @@
       <div class="text-white text-lg font-bold sm:text-xl pl-2">{{ secondRowTitle }}</div>
       <div class="flex flex-row my-2 overflow-auto no-scrollbar">
         <div v-for="asset in secondRowData" class="min-w-44 w-44  px-1  sm:w-64">
-          <img :src="getImageUrl(asset)" />
-          <p class="text-white font-semibold px-2"> {{ asset.title }}</p>
-          <p class="px-2 text-gray-300"> {{ asset.params.genres[0].title }}</p>
+          <img :src="getImageUrl(asset)" class="w-44 h-1/2" />
+          <p class="text-white font-semibold px-2 py-0"> {{ asset.title }}</p>
+          <p class="px-2 text-gray-300 py-0"> {{ asset.params.genres[0].title }}</p>
         </div>
       </div>
     </div>
@@ -17,13 +17,13 @@
       <div class="text-white text-lg sm:text-xl font-bold pl-2">{{ thirdRowTitle }}</div>
       <div class="flex flex-row overflow-auto no-scrollbar">
         <div v-for="(asset, index) in thirdRowData" class="flex flex-row min-w-44 w-44 sm:w-64 ml-1">
-          <div class="text-[35px] font-bold text-white min-w-8 w-8 relative pr-2">
-            <span class="absolute bottom-12 sm:bottom-8 mr-1">{{ index+1 }}</span>
+          <div class="text-[35px] font-bold text-white min-w-8 w-8 relative pr-1">
+            <span class="absolute left-2 sm:bottom-8 mb-20">{{ index+1 }}</span>
           </div>
           <div class="">
-          <img class="object-cover" :src="getImageUrl(asset)" />
-          <p class="px-2 font-semibold text-white"> {{ asset.title }}</p>
-          <p class="px-2 text-gray-300"> {{ asset.params.genres[1]?.title }}</p>
+          <img class="object-cover w-44" :src="getImageUrl(asset)"  />
+          <p class="px-2 font-semibold text-white py-0"> {{ asset.title }}</p>
+          <p class="px-2 text-gray-300 py-0"> {{ asset.params.genres[1]?.title }}</p>
           </div>
         </div>
       </div>
